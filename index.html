@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <button id="button">Click Me!</button> -->
+    <script>
+        // const obj={
+        //     name:"john",
+        //     gender:"male",
+        //     age:20,
+        //     fun:function(name,age){
+        //         console.log(this.name)
+        //         console.log(this.age)
+        //         console.log(`iam ${this.name} my age is ${this.age} `)
+        //     }
+          
+        // } ;//obj.fun()
+
+        // const obj1={
+        //     name:"joseph",
+        //     age:56,
+        // }
+        // // obj.fun.call(obj1,"joseph",56)
+        // // obj.fun.apply(obj1,["name","age"])
+        // const bound=obj.fun.bind(obj1,"name","age")
+        // bound()
+
+      //   const person={
+      //      name:"john",
+      //      sayHello:function(){
+      //           return `my name is ${this.name}`
+      //      }
+      //   }
+      //   console.log(person.sayHello())
+
+
+   //   const calculator={
+   //       value:10,
+   //      add:function(){
+   //         this.value+=5
+   //         console.log(this.value)
+   //      },
+        
+   //      sub:function(){
+   //         this.value-=5;
+   //         console.log(this.value)
+   //      },
+   //      }
+   //      calculator.add()
+   //      calculator.sub()
+        
+   //      console.log(calculator.value)
+
+   // const but=document.getElementById("button")
+   // but.addEventListener("click",function(){
+   //    console.log(this.textContent)
+   // })
+   // const but=document.getElementById("button")
+   // but.addEventListener("click",()=>{
+   //    console.log(target.textContent)
+   // })//error
+        
+    
+//    const car={
+//       "brand":"ford",
+//       startEngine:function(brand,price){
+//         return `starting the engine of ${this.brand} with price ${this.price} `
+//       },
+//    };
+//    // car.startEngine()
+
+//    const bike={
+//       brand:"ktm",
+//       price:100000,
+//    }
+//    // console.log(car.startEngine.call(bike,"brand"))
+// //   console.log(bike,car.startEngine.apply(bike,["brand","price"]))
+// const bound=(bike,car.startEngine.bind(bike,"brand","price"))
+//     console.log(bound())
+
+// const array=[5,10]
+// const mathOpertaions={
+//    sum:function(a,b){
+//       return a+b
+//    },
+// }
+// console.log(mathOpertaions.sum.apply(null,array))
+
+// const counter={
+//    count:0,
+//    increment:function(){
+//       this.count+=1
+//       return this.count
+//    }
+// }
+
+// const bound=counter.increment.bind(counter)
+// console.log(bound())
+
+// const timer={
+//    name:"sowmya",
+//    start:function(){
+//       setTimeout(function(){
+//          console.log(this.name)}.bind(this),4000)
+//    }
+// }
+// timer.start()
+
+// const rectangle={
+//    length:10,
+//    width:50,
+// }
+// const circle={
+//    radius:5,
+// }
+// function calculateArea(){
+//    if(this.length&&this.width){
+//       return this.length*this.width
+//    }
+//    else if(this.radius){
+//       return Math.PI*this.radius*this.radius
+//    }
+//    else{
+//       return 0;
+//    }
+// }
+// console.log(calculateArea.call(rectangle))
+// console.log(calculateArea.call(circle))
+// console.log(calculateArea.apply(rectangle))
+// console.log(Math.floor(calculateArea.apply(circle)))
+   
+
+class Employee {
+    constructor(name, designation) {
+        this.name = name;
+        this.designation = designation;
+    }
+
+    introduce() {
+        console.log(`Hi, I am ${this.name}, a ${this.designation}`);
+    }
+}
+
+// Create two instances
+const employee1 = new Employee("Sowmya", "Student");
+const employee2 = new Employee("John", "Developer");
+
+// Call the introduce method
+employee1.introduce(); // Output: Hi, I am Sowmya, a Student
+employee2.introduce(); // Output: Hi, I am John, a Developer
+
+// Extract and fix `this` issue using bind
+const extractedIntroduce = employee1.introduce;
+const boundIntroduce = extractedIntroduce.bind(employee1);
+boundIntroduce(); // Output: Hi, I am Sowmya, a Student
+
+
+    </script>
+</body>
+</html>
