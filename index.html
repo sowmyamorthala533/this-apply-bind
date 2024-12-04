@@ -146,18 +146,18 @@ class Employee {
     }
 }
 
-// Create two instances
-const employee1 = new Employee("Sowmya", "Student");
-const employee2 = new Employee("John", "Developer");
+// // Create two instances
+// const employee1 = new Employee("Sowmya", "Student");
+// const employee2 = new Employee("John", "Developer");
 
-// Call the introduce method
-employee1.introduce(); // Output: Hi, I am Sowmya, a Student
-employee2.introduce(); // Output: Hi, I am John, a Developer
+// // Call the introduce method
+// employee1.introduce(); // Output: Hi, I am Sowmya, a Student
+// employee2.introduce(); // Output: Hi, I am John, a Developer
 
-// Extract and fix `this` issue using bind
-const extractedIntroduce = employee1.introduce;
-const boundIntroduce = extractedIntroduce.bind(employee1);
-boundIntroduce(); // Output: Hi, I am Sowmya, a Student
+// // Extract and fix `this` issue using bind
+// const extractedIntroduce = employee1.introduce;
+// const boundIntroduce = extractedIntroduce.bind(employee1);
+// boundIntroduce(); // Output: Hi, I am Sowmya, a Student
 
 
     </script>
